@@ -3,4 +3,29 @@
  // Сгенерированный браузером объект особого типа -> e, ev, event
 
 
- const small = document.getElementById("small")
+ function onClickHandler(e) {
+    console.log(e.currentTarget);
+    e.stopPropagation();
+    alert("sq1");
+ }
+ function onClickHandler1(e) {
+    console.log(e.currentTarget);
+    e.stopPropagation(); //preventDefault()
+    alert("sq2");
+ }
+ function onClickHandler2(e) {
+    console.log(e.currentTarget);
+    e.stopPropagation();
+    alert("sq3");
+ }
+
+ const small = document.getElementById("small");
+ const medium = document.getElementById("medium");
+ const big = document.getElementById("big")
+;
+ small.onclick = onClickHandler;
+ medium.onclick = onClickHandler1;
+ big.onclick = onClickHandler2;
+
+ // удалить обработчик события:
+//  small.onclick = null;
