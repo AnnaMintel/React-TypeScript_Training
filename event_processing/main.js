@@ -1,7 +1,8 @@
  // event
  // function - подписчик, слушатель, обработчик (subscriber, listener, handler)
  // Сгенерированный браузером объект особого типа -> e, ev, event
-
+ // e.currentTarget - элемент, который вызвал обработчик (в процессе всплытия)
+ // e.target - элемент, который сгенерировал событие (первый получил клик)
 
  function onClickHandler(e) {
     console.log(e.currentTarget);
@@ -11,7 +12,7 @@
  function onClickHandler1(e) {
     console.log(e.currentTarget);
     e.stopPropagation(); //preventDefault()
-    alert("sq2");
+    alert("sq2");ы
  }
  function onClickHandler2(e) {
     console.log(e.currentTarget);
