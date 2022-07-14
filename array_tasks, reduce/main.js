@@ -91,6 +91,6 @@ console.log(students.reduce((acc, el) => {
 
 // делаем копию массива
 console.log(students.reduce((acc, el) => {
+   acc.push(el);
      return {...el}
-   }, [])
-)
+   }, []))
