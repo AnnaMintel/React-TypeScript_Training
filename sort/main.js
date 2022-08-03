@@ -50,3 +50,13 @@ for (let j = 0; j < array.length - 1; j++) {
    }
 }
 console.log(array)
+
+// Array.sort()
+const names = ["Hanna", "Alexandr", "Ewa", "Yana", "Alla"]
+console.log(names.sort())
+
+// Array.sort() функция sort смотрит, если подложительное число, размещает по поряду,
+// если отрицательное наоборот
+const numbers = [100, -10, 99, 8, 56]
+const compFunction = (a, b) => a - b
+console.log(numbers.sort(compFunction))
